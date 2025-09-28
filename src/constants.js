@@ -18,7 +18,7 @@ import sCoin from "./assets/images/senses/coin.png";
 
 const projects = [
     {
-        title: "JUSTFREINDS",
+        title: "JUSTFRIENDS",
         description: "Developed a website for JustFreinds: a local event and marketing agency. Integrating the brand's image, the website demonstrates an appealing and reactive interface.",
         type: "WEB DEVELOPMENT",
         tags: ["REACT", "TAILWIND", "FRAMER", "DESIGN"],
@@ -55,4 +55,32 @@ const projects = [
     }
 ]
 
-export { projects }
+const amplixExp = [
+    {
+        title: "DEVELOPMENT",
+        tasks: [
+            "Translated client business requirements into IVA call flows using Lucidchart, securing approval before development.",
+            "Develop IVA call flow logic integrated with Google Dialogflow NLU for customer intent classification.",
+        ],
+        skills: ["REQUIREMENTS ELICITATION", "WATERFALL", "CONVERSATIONAL DESIGN"]
+    },
+    {
+        title: "DATA ANALYTICS",
+        tasks: [
+            "Queried and transformed IVA data in GCP BigQuery with SQL, optimizing tables and views for analysis.",
+            "Designed dashboards in Google Looker Studio to convert raw IVA data into KPIs and actionable metrics.",
+            "Delivered insights on customer behavior and IVA performance, improving caller retention by 12%"
+        ],
+        skills: ["SQL", "BIGQUERY", "DATA VISUALIZATION"]
+    },
+    {
+        title: "AI OPTIMIZATION",
+        tasks: [
+            "Refined Dialogflow NLU models by tuning intents and training data to increase classification accuracy to at least 80%",
+            "Facilitated weekly client reviews, presenting analytics, recommending enhancements, and aligning IVA updates with business goals."
+        ],
+        skills: ["NLU", "AGILE", "DIALOGFLOW", "CX"]
+    }
+]
+
+export { projects, amplixExp }

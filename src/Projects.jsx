@@ -62,16 +62,15 @@ const Card = ({ i, expanded, setExpanded }) => {
 }
 
 const Projects = () => {
-  const [expanded, setExpanded] = useState(0);
+  const [expanded, setExpanded] = useState(false);
   
   return (
-    <section className={`min-h-screen flex flex-col items-center justify-center`}>
-      
+    <section className={`min-h-screen flex flex-col items-center justify-center gap-4`}>
+
       {[0, 1, 2, 3].map((i) => (
         <Card i={i} expanded={expanded} setExpanded={setExpanded} />
       ))}  
-     
-        
+    
     </section>
   )
 }
