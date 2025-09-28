@@ -48,7 +48,7 @@ const Contact = ({}) => {
     <section id="contact" className={`min-h-screen flex flex-col items-center justify-center`}>
       <div className={`flex`}>
         <FaLinkedin className={`w-16 h-auto`} onClick={() => window.open("https://www.linkedin.com/in/danterdeluca/", "_blank", "noopener,noreferrer")}/>
-        <a className={`cursor-default`} href="mailto:you@example.com">
+        <a className={`cursor-default`} href="mailto:dante.deluca.dev@gmail.com">
           <MdMailOutline className={`w-16 h-auto`} />
         </a>
         

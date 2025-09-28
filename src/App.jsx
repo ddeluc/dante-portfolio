@@ -5,6 +5,7 @@ import Projects from './Projects'
 import Navbar from './Navbar'
 import Experience from './Experience'
 import Contact from './Contact'
+import Footer from './Footer'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Projects />
         <Experience />
         <Contact />
+        <Footer />
       </div>
     </>
   )
