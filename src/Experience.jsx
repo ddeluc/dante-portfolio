@@ -5,7 +5,10 @@ import { amplixExp } from "./constants";
 const Experience = () => {
 
   return (
-    <section className={`min-h-screen flex flex-col items-center justify-center`}>
+    <section className={`min-h-screen flex flex-col items-center justify-center gap-16 px-4`}>
+      <div>
+        EXPERIENCE
+      </div>
       
       <div className={`space-y-12 border-l pl-4`}>
         <div>
@@ -28,7 +31,7 @@ const Experience = () => {
                     <li>{task}</li>
                   ))}
                 </ul>
-                <div className={`flex`}>
+                <div className={`flex flex-wrap`}>
                   {exp.skills.map((skill) => (
                     <span className={`p-2 pt-1 border rounded-xl`}>{skill}</span>
                   ))}

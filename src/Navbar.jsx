@@ -11,7 +11,6 @@ const Navbar = ({}) => {
         <div className={`flex gap-2`}>
           <span>PROJECTS</span>
           <span>EXPERIENCE</span>
-          <span>ART</span>
           <span>CONTACT</span>
         </div>
       </div>

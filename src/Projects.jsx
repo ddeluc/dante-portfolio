@@ -7,10 +7,10 @@ const Card = ({ i, expanded, setExpanded }) => {
   const isOpen = i === expanded;
 
   return (
-    <motion.div className={`max-w-11/12 w-full my-4`}
+    <motion.div className={`relative max-w-11/12 w-full my-4`}
       onClick={() => setExpanded(isOpen ? false : i)}
     >
-      <motion.div className={`grid md:grid-cols-3 grid-cols-2 gap-4 w-full items-center border-b pb-4`}>
+      <motion.div className={`relative z-10 grid md:grid-cols-3 grid-cols-2 gap-4 w-full items-center border-b pb-4`}>
         
         <div className={``}>{projects[i].title}</div>
         <div className={`hidden md:block text-center`}>{projects[i].type}</div>       
@@ -26,7 +26,7 @@ const Card = ({ i, expanded, setExpanded }) => {
       </motion.div>
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.div className={`space-y-4`}
+          <motion.div className={`relative space-y-4`}
             initial="collapsed"
             animate="open"
             exit="collapsed"
@@ -39,7 +39,7 @@ const Card = ({ i, expanded, setExpanded }) => {
             <div>
               {projects[i].description}
             </div>
-            <div className={`space-x-2`}>
+            <div className={`space-x-2 flex flex-wrap`}>
               {projects[i].tags.map((tag) => (
                 <span className={`p-2 pt-1 border rounded-xl`}>
                   {tag}
@@ -65,11 +65,16 @@ const Projects = () => {
   const [expanded, setExpanded] = useState(false);
   
   return (
-    <section className={`min-h-screen flex flex-col items-center justify-center gap-4`}>
-
-      {[0, 1, 2, 3].map((i) => (
-        <Card i={i} expanded={expanded} setExpanded={setExpanded} />
-      ))}  
+    <section className={`min-h-screen flex flex-col items-center justify-center gap-16`}>
+      <div>
+        PROJECTS
+      </div>
+      <div className={`flex flex-col w-full items-center justify-center gap-4`}>
+        {[0, 1, 2, 3].map((i) => (
+          <Card i={i} expanded={expanded} setExpanded={setExpanded} />
+        ))}  
+      </div>
+      
     
     </section>
   )
