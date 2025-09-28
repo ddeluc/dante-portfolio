@@ -5,7 +5,7 @@ import { amplixExp } from "./constants";
 const Experience = () => {
 
   return (
-    <section className={`min-h-screen flex flex-col items-center justify-center gap-16 px-4`}>
+    <section id="experience" className={`min-h-screen flex flex-col items-center justify-center gap-16 px-4`}>
       <div>
         EXPERIENCE
       </div>

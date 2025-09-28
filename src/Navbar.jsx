@@ -5,13 +5,13 @@ const Navbar = ({}) => {
   return (
     <div className={`fixed w-full`}>
       <div className={`flex justify-between`}>
-        <div className={``}>
+        <a className={``} href="#">
           DANTE DELUCA
-        </div>
+        </a>
         <div className={`flex gap-2`}>
-          <span>PROJECTS</span>
-          <span>EXPERIENCE</span>
-          <span>CONTACT</span>
+          <a href="#projects">PROJECTS</a>
+          <a href="#experience">EXPERIENCE</a>
+          <a href="#contact">CONTACT</a>
         </div>
       </div>
       

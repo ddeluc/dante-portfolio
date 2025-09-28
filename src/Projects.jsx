@@ -65,7 +65,7 @@ const Projects = () => {
   const [expanded, setExpanded] = useState(false);
   
   return (
-    <section className={`min-h-screen flex flex-col items-center justify-center gap-16`}>
+    <section id="projects" className={`min-h-screen flex flex-col items-center justify-center gap-16`}>
       <div>
         PROJECTS
       </div>
