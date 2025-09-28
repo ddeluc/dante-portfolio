@@ -4,6 +4,7 @@ import Hero from './Hero'
 import Projects from './Projects'
 import Navbar from './Navbar'
 import Experience from './Experience'
+import Contact from './Contact'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Hero />
         <Projects />
         <Experience />
+        <Contact />
       </div>
     </>
   )
