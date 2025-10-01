@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
 import { FaLinkedin } from "react-icons/fa";
-import { MdMailOutline } from "react-icons/md";
+import { AiOutlineMail } from "react-icons/ai";
 import { IoLogoGithub } from "react-icons/io";
 
 const Contact = ({}) => {
@@ -45,19 +45,23 @@ const Contact = ({}) => {
   };
 
   return (
-    <section id="contact" className={`min-h-screen flex flex-col items-center justify-center`}>
-      <div className={`flex`}>
-        <FaLinkedin className={`w-16 h-auto`} onClick={() => window.open("https://www.linkedin.com/in/danterdeluca/", "_blank", "noopener,noreferrer")}/>
-        <a className={`cursor-default`} href="mailto:dante.deluca.dev@gmail.com">
-          <MdMailOutline className={`w-16 h-auto`} />
-        </a>
-        
-        <IoLogoGithub className={`w-16 h-auto`} onClick={() => window.open("https://github.com/ddeluc", "_blank", "noopener,noreferrer")}/>
+    <section id="contact" className={`min-h-screen flex flex-col gap-24 items-center justify-center relative z-10 py-36`}>
+      
+      <div className={`md:text-4xl text-2xl`}>
+        CONTACT
       </div>
+      
+      {/* <div className={`flex items-center justify-center space-x-4`}>
+        <FaLinkedin className={`h-16 w-auto`} onClick={() => window.open("https://www.linkedin.com/in/danterdeluca/", "_blank", "noopener,noreferrer")}/>
+        <a className={`cursor-default`} href="mailto:dante.deluca.dev@gmail.com">
+          <AiOutlineMail className={`h-16 w-auto`} />
+        </a>        
+        <IoLogoGithub className={`h-16 w-auto`} onClick={() => window.open("https://github.com/ddeluc", "_blank", "noopener,noreferrer")}/>
+      </div> */}
     
       <form
         onSubmit={handleSubmit}
-        className={``}
+        className={`space-y-4 max-w-sm w-full px-8`}
       >
         <div>
           <label className={``} htmlFor="email">
@@ -70,8 +74,7 @@ const Contact = ({}) => {
             value={formData.email}
             onChange={handleChange}
             required
-            className={`w-full border`}
-            placeholder="you@example.com"
+            className={`w-full border p-2 mt-1 rounded-sm`}
           />
         </div>
 
@@ -86,17 +89,16 @@ const Contact = ({}) => {
             value={formData.message}
             onChange={handleChange}
             required
-            className={`w-full border`}
-            placeholder="Your message..."
+            className={`w-full border resize-none p-2 mt-1 h-36 rounded-sm`}
           />
         </div>
 
         <button
           type="submit"
-          className={``}
+          className={`w-full`}
         >
           Send
-        </button>
+        </button>        
 
         {status && <p className="text-sm text-center mt-2">{status}</p>}
       </form>

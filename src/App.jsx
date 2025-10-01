@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { motion, useScroll } from 'framer-motion';
 
 import Hero from './Hero'
 import Projects from './Projects'
@@ -8,12 +9,17 @@ import Contact from './Contact'
 import Footer from './Footer'
 
 function App() {
+  const container = useRef();
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  })
 
   return (
     <>
-      <div className={`min-h-screen relative`}>
+      <div ref={container} className={`min-h-screen relative`}>
         <Navbar />
-        <Hero />
+        <Hero scrollYProgress={scrollYProgress} />
         <Projects />
         <Experience />
         <Contact />
