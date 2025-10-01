@@ -26,15 +26,16 @@ const Card = ({ i, expanded, setExpanded }) => {
       </motion.div>
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.div className={`relative space-y-4`}
+          <motion.div className={`relative space-y-4 overflow-hidden`}
+            style={{overflowAnchor: "none"}}
             initial="collapsed"
             animate="open"
             exit="collapsed"
             variants={{
-              open: { opacity: 1, height: "auto" },
-              collapsed: { opacity: 0, height: 0 }
+              open: { height: "auto" },
+              collapsed: { height: 0 }
             }}
-            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+            transition={{ duration: 0.8, ease: [.25,.1,.25,1] }}
           >
             <div>
               {projects[i].description}
