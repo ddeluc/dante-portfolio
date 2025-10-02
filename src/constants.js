@@ -15,6 +15,10 @@ import sMenu from "./assets/images/senses/menu.png";
 import sPlayer from "./assets/images/senses/player.png";
 import sCoin from "./assets/images/senses/coin.png";
 
+import { FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import { IoLogoGithub } from "react-icons/io";
+
 
 const projects = [
     {
@@ -87,4 +91,22 @@ const amplixExp = [
     }
 ]
 
-export { projects, amplixExp }
+const socials = [
+    {
+        title: "LINKEDIN",
+        link: "https://www.linkedin.com/in/danterdeluca/",
+        icon: FaLinkedin,
+    },
+    {
+        title: "EMAIL",
+        link: "mailto:dante.deluca.dev@gmail.com",
+        icon: AiOutlineMail,
+    },
+    {
+        title: "GITHUB",
+        link: "https://github.com/ddeluc",
+        icon: IoLogoGithub,
+    }
+]
+
+export { projects, amplixExp, socials }
