@@ -1,7 +1,4 @@
 import React from "react";
-import danteAligheriEyes from "./assets/images/hero/danteAligheriEyes.png";
-
-
 
 const Hero = ({  }) => {
 
