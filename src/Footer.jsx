@@ -21,7 +21,7 @@ const Footer = () => {
         <motion.div className={`relative flex justify-center`} initial="initial" whileHover="hovered">
           <motion.div className={`absolute`}
             variants={{initial: {opacity: 0, y: 0}, hovered: {opacity: 1, y: -40}}}
-            transition={{type: "spring", ease: "easeOut", duration: 0.3}}
+            transition={{type: "tween", ease: "easeOut", duration: 0.1}}
           >
             <FaLinkedin className={`h-10 w-auto`} onClick={() => window.open("https://www.linkedin.com/in/danterdeluca/", "_blank", "noopener,noreferrer")} />
           </motion.div>          
@@ -32,7 +32,7 @@ const Footer = () => {
         <motion.div className={`relative flex justify-center`} initial="initial" whileHover="hovered">
           <motion.div className={`absolute`}
             variants={{initial: {opacity: 0, y: 0}, hovered: {opacity: 1, y: -40}}}
-            transition={{type: "spring", ease: "easeOut", duration: 0.3}}
+            transition={{type: "tween", ease: "easeOut", duration: 0.1}}
           >
             <AiOutlineMail className={`h-10 w-auto`} onClick={() => window.open("mailto:dante.deluca.dev@gmail.com", "_blank", "noopener,noreferrer")} />
           </motion.div>          
@@ -42,7 +42,7 @@ const Footer = () => {
         <motion.div className={`relative flex justify-center`} initial="initial" whileHover="hovered">
           <motion.div className={`absolute`}
             variants={{initial: {opacity: 0, y: 0}, hovered: {opacity: 1, y: -40}}}
-            transition={{type: "spring", ease: "easeOut", duration: 0.3}}
+            transition={{type: "tween", ease: "easeOut", duration: 0.1}}
           >
             <IoLogoGithub className={`h-10 w-auto`} onClick={() => window.open("https://github.com/ddeluc", "_blank", "noopener,noreferrer")} />
           </motion.div>          

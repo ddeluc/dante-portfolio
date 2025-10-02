@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <div ref={container} className={`min-h-screen relative`}>
+      <div ref={container} className={`min-h-screen relative font-manrope`}>
         <Navbar />
         <Hero scrollYProgress={scrollYProgress} />
         <Projects />

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { isMobile } from "react-device-detect";
+import { motion } from "framer-motion";
 
 const Navbar = ({}) => {
 
@@ -13,9 +14,9 @@ const Navbar = ({}) => {
         }
         
         <div className={`flex gap-6`}>
-          <a href="#projects">PROJECTS</a>
-          <a href="#experience">EXPERIENCE</a>
-          <a href="#contact">CONTACT</a>
+          <motion.a href="#projects" whileHover={{ y: 4 }} transition={{ duration: 0.1, type: "tween" }}>PROJECTS</motion.a>
+          <motion.a href="#experience" whileHover={{ y: 4 }} transition={{ duration: 0.1, type: "tween" }}>EXPERIENCE</motion.a>
+          <motion.a href="#contact" whileHover={{ y: 4 }} transition={{ duration: 0.1, type: "tween" }}>CONTACT</motion.a>
         </div>
       </div>      
     </div>
