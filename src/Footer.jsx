@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { isMobile } from 'react-device-detect';
 
 const Footer = () => {
+  useEffect(() => {
+    console.log("isMobile: " + isMobile);
+  })
 
   return (
     <div className={`w-full fixed bottom-0 flex justify-between p-2 gap-4 z-30`}>
       <div>
-        Portfolio V1.0
+        {isMobile ? "v1.0" : "Portfolio v1.0"}
       </div>
       <div className={`space-x-6`}>
         <a href="https://www.linkedin.com/in/danterdeluca/" target="_blank" rel="noopener noreferrer">{`[LINKEDIN]`}</a>

@@ -24,7 +24,8 @@ const projects = [
         tags: ["REACT", "TAILWIND", "FRAMER", "DESIGN"],
         link: "https://just-friends-nine.vercel.app/",
         status: "DEV",
-        pictures: [jfLading, jfHome, jfConnect]
+        pictures: [jfLading, jfHome, jfConnect],
+        year: "2025",
     },
     {
         title: "QUIZITALIAN",
@@ -33,7 +34,8 @@ const projects = [
         tags: ["REACT", "MONGODB", "EXPRESS", "NODEJS", "EDUCATION"],
         link: "https://quizitalian-90795058235.us-central1.run.app",
         status: "DEV",
-        pictures: [qiLogin, qiHome, qiQuiz]
+        pictures: [qiLogin, qiHome, qiQuiz],
+        year: "2023",
     },
     {
         title: "HANNYATEMPLATE",
@@ -42,7 +44,8 @@ const projects = [
         tags: ["REACT", "TRHEEJS", "TAILWIND", "DESIGN"],
         link: "no_link",
         status: "DEV",
-        pictures: [htHome, htAbout, htWork]
+        pictures: [htHome, htAbout, htWork],
+        year: "2023"
     },
     {
         title: "SENSES",
@@ -51,7 +54,8 @@ const projects = [
         tags: ["LUA", "LOVE2D", "PLATFORMER"],
         link: "https://youtu.be/ZR-qB0hgmuo",
         status: "DEV",
-        pictures: [sMenu, sPlayer, sCoin]
+        pictures: [sMenu, sPlayer, sCoin],
+        year: "2020"
     }
 ]
 

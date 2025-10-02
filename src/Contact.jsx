@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
 import { FaLinkedin } from "react-icons/fa";
@@ -34,7 +35,7 @@ const Contact = ({}) => {
       )
       .then(
         () => {
-          setStatus("Message sent successfully!");
+          setStatus("Message sent. I will get back to you shortly.");
           setFormData({ email: "", message: "" });
         },
         (error) => {
@@ -47,8 +48,11 @@ const Contact = ({}) => {
   return (
     <section id="contact" className={`min-h-screen flex flex-col gap-24 items-center justify-center relative z-10 py-36`}>
       
-      <div className={`md:text-4xl text-2xl`}>
+      {/* <div className={`md:text-4xl text-2xl`}>
         CONTACT
+      </div> */}
+      <div className={`md:text-4xl text-2xl text-center`}>
+        Leave me a message and I'll get back to you.
       </div>
       
       {/* <div className={`flex items-center justify-center space-x-4`}>
@@ -61,13 +65,14 @@ const Contact = ({}) => {
     
       <form
         onSubmit={handleSubmit}
-        className={`space-y-4 max-w-sm w-full px-8`}
+        className={`space-y-4 md:w-sm px-8`}
       >
-        <div>
+        <div className={``}>
           <label className={``} htmlFor="email">
             Email
           </label>
           <input
+
             type="email"
             id="email"
             name="email"
@@ -93,14 +98,19 @@ const Contact = ({}) => {
           />
         </div>
 
-        <button
+        <motion.button
           type="submit"
-          className={`w-full`}
+          className={`w-full rounded-sm py-1 text-lg mt-1`}
+          initial={{ backgroundColor: "#00000000", color: "#000000FF" }}
+          whileHover={{ backgroundColor: "#000000FF", color: "#FFFFFF" }}
+          transition={{ duration: 0.075, ease: "easeInOut" }}
         >
-          Send
-        </button>        
+          SEND
+        </motion.button>        
 
-        {status && <p className="text-sm text-center mt-2">{status}</p>}
+        <div className={`text-sm text-center mt-2 min-h-10`}>
+          {status && <p className="">{status}</p>}
+        </div>        
       </form>
         
     </section>

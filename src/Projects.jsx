@@ -7,21 +7,14 @@ const Card = ({ i, expanded, setExpanded }) => {
   const isOpen = i === expanded;
 
   return (
-    <motion.div className={`relative max-w-11/12 w-full my-4`}
-      onClick={() => setExpanded(isOpen ? false : i)}
-    >
-      <motion.div className={`relative z-10 grid md:grid-cols-3 grid-cols-2 w-full items-center border-b pb-4 md:text-xl text-lg`}>
+    <motion.div className={`relative max-w-11/12 w-full my-4`}>
+      <motion.div className={`relative z-10 grid md:grid-cols-3 grid-cols-2 w-full items-center border-b pb-4 md:text-xl text-lg`}
+        onClick={() => setExpanded(isOpen ? false : i)}
+      >
         
         <div className={``}>{projects[i].title}</div>
-        <div className={`hidden md:block text-center`}>{projects[i].type}</div>       
-        <div className={`text-right cursor-default`}
-          onClick={(e) => {
-            e.stopPropagation();
-            window.open(projects[i].link, "_blank", "noopener,noreferrer")
-          }}
-        >
-          VIEW
-        </div>
+        <div className={`hidden md:block text-center`}>{projects[i].type}</div>   
+        <div className={`text-right cursor-default`}>{projects[i].year}</div>    
         
       </motion.div>
       <AnimatePresence initial={false}>
@@ -40,11 +33,22 @@ const Card = ({ i, expanded, setExpanded }) => {
             <div className={`md:text-2xl text-lg max-w-3xl`}>
               {projects[i].description}
             </div>
+            <motion.div className={`cursor-default text-lg rounded-sm p-1 px-2 mt-1 inline-block`}
+              initial={{ backgroundColor: "#00000000", color: "#000000FF" }}
+              whileHover={{ backgroundColor: "#000000FF", color: "#FFFFFF" }}
+              transition={{ duration: 0.075, ease: "easeInOut" }}
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(projects[i].link, "_blank", "noopener,noreferrer")
+              }}
+            >
+              {`> VIEW PROJECT`}
+            </motion.div>            
             <div className={`gap-2 flex flex-wrap mb-8`}>
               {projects[i].tags.map((tag) => (
-                <span className={`p-2 pt-1 border rounded-xl`}>
+                <motion.span className={`p-2 pt-1 border rounded-xl`} whileHover={{ y: -2 }}>
                   {tag}
-                </span>
+                </motion.span>
               ))}
             </div>
             <div className={`grid grid-cols-1 md:grid-cols-3 w-full gap-2`}>

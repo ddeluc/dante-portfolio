@@ -1,5 +1,6 @@
 import React from "react";
 import LiquidGlass from "liquid-glass-react";
+import { motion } from "framer-motion";
 
 import { amplixExp } from "./constants";
 
@@ -11,7 +12,7 @@ const Experience = () => {
         EXPERIENCE
       </div>
       
-      <div className={`space-y-20 border-l pl-4`}>
+      <div className={`space-y-20 border-l pl-4 pb-16`}>
         <div>
           <div>2018-2023</div>
           <div className={`md:text-xl text-lg font-semibold`}>WESTERN UNIVERSITY</div>
@@ -24,18 +25,18 @@ const Experience = () => {
           <div className={`md:text-xl text-lg font-semibold`}>AMPLIX</div>
           <div className={`md:text-xl text-lg`}>CHATBOT ENGINEER</div>
           <div>Intelligent Virtual Agents | Natural Language Understanding</div>
-          <div className={`mt-8 ml-2 space-y-8`}>
+          <div className={`mt-8 md:ml-4 ml-2 space-y-8`}>
             {amplixExp.map((exp) => (
               <div className={`space-y-2`}>
                 <div className={`md:text-xl text-lg`}>{exp.title}</div>
                 <ul className="list-none">
                   {exp.tasks.map((task) => (
-                    <li>{task}</li>
+                    <li>{`+ ${task}`}</li>
                   ))}
                 </ul>
                   <div className={`flex flex-wrap gap-2`}>
                     {exp.skills.map((skill) => (
-                      <span className={`p-2 pt-1 border rounded-xl`}>{skill}</span>
+                      <motion.span className={`p-2 pt-1 border rounded-xl`} whileHover={{ y: -2 }}>{skill}</motion.span>
                     ))}
                   </div>
               </div>
