@@ -13,7 +13,7 @@ const Card = ({ i, expanded, setExpanded }) => {
         onClick={() => setExpanded(isOpen ? false : i)}
       >
         
-        <motion.div variants={{ hovered: { x: 5 }}} transition={{ type: "tween", duration: 0.1 }} className={``}>{projects[i].title}</motion.div>
+        <motion.div variants={{ hovered: { x: 5 }}} transition={{ type: "tween", duration: 0.2 }} className={``}>{projects[i].title}</motion.div>
         <div className={`hidden md:block text-center`}>{projects[i].type}</div>   
         <div className={`text-right cursor-default`}>{projects[i].year}</div>    
         
