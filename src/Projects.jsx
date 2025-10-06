@@ -8,11 +8,12 @@ const Card = ({ i, expanded, setExpanded }) => {
 
   return (
     <motion.div className={`relative max-w-11/12 w-full my-4`}>
-      <motion.div className={`relative z-10 grid md:grid-cols-3 grid-cols-2 w-full items-center border-b pb-4 md:text-xl text-lg`}
+      <motion.div className={`relative z-10 grid md:grid-cols-3 grid-cols-2 w-full items-center border-b pb-4 md:text-xl text-lg cursor-default`}
+        whileHover="hovered"
         onClick={() => setExpanded(isOpen ? false : i)}
       >
         
-        <div className={``}>{projects[i].title}</div>
+        <motion.div variants={{ hovered: { x: 5 }}} transition={{ type: "tween", duration: 0.1 }} className={``}>{projects[i].title}</motion.div>
         <div className={`hidden md:block text-center`}>{projects[i].type}</div>   
         <div className={`text-right cursor-default`}>{projects[i].year}</div>    
         
