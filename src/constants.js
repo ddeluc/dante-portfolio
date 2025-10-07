@@ -46,7 +46,7 @@ const projects = [
         description: "A demonstration of interactive 3D models in a frontend application.",
         type: "WEB DEVELOPMENT",
         tags: ["REACT", "TRHEEJS", "TAILWIND", "DESIGN"],
-        link: "no_link",
+        link: "https://react-three-js-template.vercel.app/",
         status: "DEV",
         pictures: [htHome, htAbout, htWork],
         year: "2023"
