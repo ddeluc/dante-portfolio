@@ -21,7 +21,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 import Samurai from "./assets/art/samurai.jpg";
 import Hannya from "./assets/art/hannya.jpg";
-import Bust from "./assets/art/bust.jpg";
+import Bust from "./assets/art/bust.JPG";
 
 
 const projects = [

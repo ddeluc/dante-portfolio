@@ -3,7 +3,7 @@ import { art } from "./constants";
 import signature from "./assets/art/signatureSvg.svg";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const ArtWork = ({ src, title, description }) => {
+const ArtWork = ({ src }) => {
 
   return (
     <div className={`flex relative`}>
@@ -37,9 +37,9 @@ const Art = ({ }) => {
       <div className={`border-b border w-15`}/>
 
       <div className={`flex flex-col h-full gap-16 flex-wrap m-4`}>
-        <ArtWork src={art[0].src} title={art[0].title} description={art[0].description} />
-        <ArtWork src={art[1].src} title={art[1].title} description={art[0].description} />
-        <ArtWork src={art[2].src} title={art[2].title} description={art[0].description} />
+        <ArtWork src={art[0].src} />
+        <ArtWork src={art[1].src} />
+        <ArtWork src={art[2].src} />
       </div>
     </section>
   )
