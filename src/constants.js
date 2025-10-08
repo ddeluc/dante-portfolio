@@ -19,6 +19,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoLogoGithub } from "react-icons/io";
 
+import Samurai from "./assets/art/samurai.jpg";
+import Hannya from "./assets/art/hannya.jpg";
+import Bust from "./assets/art/bust.jpg";
+
 
 const projects = [
     {
@@ -109,4 +113,22 @@ const socials = [
     }
 ]
 
-export { projects, amplixExp, socials }
+const art = [
+    {
+        title: "Hannya Bloom",
+        src: Hannya,
+        description: "A fusion of tradition and modernity, Hannya Bloom contrasts the ferocity of a demon mask with the serenity of falling petals. The figure’s calm stance beneath the crimson sky evokes strength contained within elegance — a quiet power born from duality."
+    },
+    {
+        title: "Modern Samurai",
+        src: Samurai,
+        description: "Set against a tranquil blue backdrop, Mondern Samurai reimagines the modern warrior through the lens of street culture and tradition. The red samurai mask and ornate helmet radiate power, while the casual stance and tattooed hands suggest introspection — a quiet strength rooted in balance between discipline and self-expression."
+    },
+    {
+        title: "Bust",
+        src: Bust,
+        description: "A classical bust stands out against a bold red background. The piece blends ancient sculpture with a modern twist, using soft light and digital brushwork to highlight timeless beauty in a fresh, minimal way."
+    },    
+]
+
+export { projects, amplixExp, socials, art }

@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { motion, useScroll } from 'framer-motion';
+import { createBrowserRouter, RouterProvider, BrowserRouter } from "react-router-dom";
 
 import Hero from './Hero'
 import Projects from './Projects'
@@ -7,8 +8,10 @@ import Navbar from './Navbar'
 import Experience from './Experience'
 import Contact from './Contact'
 import Footer from './Footer'
+import Art from './Art';
 
-function App() {
+const DeveloperPortfolio = () => {
+
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
@@ -23,8 +26,33 @@ function App() {
         <Projects />
         <Experience />
         <Contact />
-        <Footer />
+        <Footer portfolio={"pro"} />
       </div>
+    </>
+  )
+}
+
+const ArtPortfolio = () => {
+
+  return (
+    <div className={`min-h-screen relative`}>
+      <Art />
+      <Footer portfolio={"art"}/>
+    </div>
+    
+  )
+}
+
+const router = createBrowserRouter([
+  {path: "/", element: <DeveloperPortfolio />},
+  {path: "/art", element: <ArtPortfolio />}
+])
+
+function App() {
+
+  return (
+    <>
+      <RouterProvider router={router} />
     </>
   )
 }
