@@ -1,5 +1,9 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/resume.pdf",
+      "permanent": true
+    }
   ]
 }
